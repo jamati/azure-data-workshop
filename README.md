@@ -19,6 +19,8 @@ No portal do Azure Portal click em **"Create a resource"** e então digite **Res
 - Resource group: Digite um nome para o sue resource. Ex: MeuML
 - Selecione uma região. Aqui você pode utilizar qualquer região disponível.   
 
-![img1](/img/resourcegroup.GIF)
+![img2](/img/resourcegroup.GIF)
+
+![img3](/img/resourcegroup2.png)
 
 ___
