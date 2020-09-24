@@ -24,3 +24,18 @@ No portal do Azure Portal click em **"Create a resource"** e então digite **Res
 ![img3](/img/resourcegroup.png)
 
 ___
+
+> 3. Criar o Event Hubs
+
+No portal do Azure Portal click em **"Create a resource"** e então digite **Event Hubs** . Click em **"Create"** e siga as configurações abaixo: 
+
+- Subscription: Selecione sua subscrição
+- Resource group: Selecione o resource group criado na etapa anterior
+- Namespace name: Digite um nome para seu namespace. eg: eventhubworkshop
+- Region: Selecione uma região onde será feito o deployment do seu workspace. Recomendo East US por questões de custos.
+- Pricing tier: Aqui você deve selecionar tier do Event Hub. Para esse exemplo vou utilizar o "Standard".
+- Throughput Units: Aqui você define quantas unidades são necessárias para nossa carga de trabalho. Para esse exemplo vou utilizar "1"
+
+![img4](/img/eventhubs.png)
+
+___
