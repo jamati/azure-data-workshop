@@ -21,6 +21,6 @@ No portal do Azure Portal click em **"Create a resource"** e então digite **Res
 
 ![img2](/img/resourcegroup.GIF)
 
-![img3](/img/resourcegroup2.png)
+![img3](/img/resourcegroup.png)
 
 ___
