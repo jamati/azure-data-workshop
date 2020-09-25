@@ -96,5 +96,5 @@ ___
 
 - Crie dois **"Blob Containers"** um chamado **"rawdata"** e outro **"transformeddata"**
 
-![img13](/img/explorer1.png)
+![img13](/img/explorer2.png)
 
