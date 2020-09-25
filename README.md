@@ -54,7 +54,7 @@ ___
 
 > 4. Criar o seu Data Lake
 
-Dentro do seu resource group criado anteriormente click em **"+Add"** e então digite **Storage Account** então click em **"Create"** e siga as configurações abaixo:
+Dentro do seu resource group criado anteriormente click em **"+Add"** digite **Storage Account** então click em **"Create"** e siga as configurações abaixo:
 
 - Subscription: Selecione sua subscrição
 - Resource group: Selecione o resource group criado anteriormente
@@ -65,21 +65,21 @@ Dentro do seu resource group criado anteriormente click em **"+Add"** e então d
 - Replication: Aqui você deve selecionar o tipo de replicação. Para esse workshop vou utilizar **"Locally-redundant storage"**
 - Blob access tier: Aqui você seleciona o tipo de acesso. Para esse workshop vou utilizar **"Hot"**
 
-Click em **"Next: Networking"**
+###Após preencher os campos click em **"Next: Networking"**###
 
 ![img7](/img/storageaccount.GIF)
 
 ![img8](/img/storageaccount1.png)
 
-Em **"Networking"** deixe as opções padrão e click em **"Next: Data protection"**
+###Em **"Networking"** deixe as opções padrão e click em **"Next: Data protection"**###
 
 ![img9](/img/storageaccount2.png)
 
-Em **"Data protection"** deixe as opções padrão e click em **"Next: Advanced"**
+###Em **"Data protection"** deixe as opções padrão e click em **"Next: Advanced"**###
 
 ![img10](/img/storageaccount3.png)
 
-Em **"Advanced"** na opção **"Data Lake Storage Gen2"** click em  **"Enabled"** e depois click em **"Review + Create"**, após o review click em **"Create"**
+###Em **"Advanced"** na opção **"Data Lake Storage Gen2"** click em  **"Enabled"** e depois click em **"Review + Create"**, após o review click em **"Create"**###
 
 ![img11](/img/storageaccount04.png)
 
