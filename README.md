@@ -80,7 +80,7 @@ Em **"Data protection"** deixe as opções padrão e click em **"Next: Advanced"
 
 Em **"Advanced"** na opção **"Data Lake Storage Gen2"** click em  **"Enabled"** e depois click em **"Review + Create"**, após o review click em **"Create"**
 
-![img11](/img/storageaccount4.png)
+![img11](/img/storageaccount04.png)
 
 
 ___
