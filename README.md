@@ -65,10 +65,11 @@ Dentro do seu resource group criado anteriormente click em **"+Add"** e então d
 - Replication: Aqui você deve selecionar o tipo de replicação. Para esse workshop vou utilizar **"Locally-redundant storage"**
 - Blob access tier: Aqui você seleciona o tipo de acesso. Para esse workshop vou utilizar **"Hot"**
 
-![img7](/img/storageaccount.GIF)
-![img8](/img/storageaccount1.png)
-
 Click em **"Next: Networking"**
+
+![img7](/img/storageaccount.GIF)
+
+![img8](/img/storageaccount1.png)
 
 Em **"Networking"** deixe as opções padrão e click em **"Next: Data protection"**
 
