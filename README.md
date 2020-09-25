@@ -16,7 +16,7 @@ ___
 No portal do Azure Portal click em **"Create a resource"** e então digite **Resource Group** . Click em **"Create"** 
 
 - Subscription: Selecione sua subscrição
-- Resource group: Digite um nome para o sue resource. Ex: MeuML
+- Resource group: Digite um nome para o sue resource. Ex: data-workshop
 - Selecione uma região. Aqui você pode utilizar qualquer região disponível.   
 
 ![img2](/img/resourcegroup.GIF)
@@ -37,17 +37,19 @@ No portal do Azure Portal click em **"Create a resource"** e então digite **Eve
 - Throughput Units: Aqui você define quantas unidades são necessárias para nossa carga de trabalho. Para esse workshop vou utilizar "1"
 
 ![img4](/img/eventhubs.png)
-![img5](/img/eventhub1.png)
 
-___
+### Agora você precisa criar o Event Hub ###
 
-> 4. Criar o Event Hub
-
-Uma vez dentro do Event Hubs namespace que você acabou de criar click em **"+ Event Hub"** e então siga as configurações abaixo: 
+Uma vez dentro do Event Hubs namespace que você acabou de criar click em **"+ Event Hub"** e então siga as configurações abaixo e depois click em **"Create"**
 
 - Name: Digite um nome para seu Event Hub. ex: eventhub1
 - Partition Count: Selecione o resource group criado na etapa anterior
 - Message Retention: Digite um nome para seu namespace. ex: eventhubworkshop
 - Capture: Selecione **"Off"**
 
+![img5](/img/eventhub1.png)
 ![img6](/img/eventhub2.png)
+
+___
+
+> 4. 
