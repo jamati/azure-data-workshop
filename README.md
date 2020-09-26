@@ -269,3 +269,21 @@ Você pode repetir esse processo quantas vezes quiser para gerar mais dados.
 
 ___
 
+> 10. Vamos criar nosso Data Factory para fazer a orquestração dos dados
+
+Dentro do seu resource group criado anteriormente click em **"+Add"** digite **Data Factory** então click em **"Create"** e siga as configurações abaixo:
+
+- Subscription: Selecione sua subscrição
+- Resource group: Selecione o resource group criado nas etapas anteriores
+- Region: Selecione uma região onde será feito o deployment do seu workspace. Recomendo East US por questões de custos.
+- Name: Digite um nome para seu **"Data Factory"**. ex: dataworkshop 
+- Version: Selecione **"V2"**
+
+Click em **"Next: Git configuration"**
+
+- Nesta etapa você pode configurar um repositório para seu código. Para esse workshop vamos marcar a opção **"Configure Git Later"** clicar em **"Review + create"** e em seguida clicar em **"Create"**
+
+
+![img30](/img/datafactory1.png)
+
+![img31](/img/datafactory2.png)
