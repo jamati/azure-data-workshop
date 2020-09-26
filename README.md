@@ -151,6 +151,7 @@ Novamente dentro do seu Stream Analytics job click em **"Inputs"** em seguida cl
 ___
 
 Mais uma vez dentro do seu Stream Analytics job click em **"Outputs"** em seguida click em **"+ Add"** selecione **"Power BI"** e click em **"Authorize"**
+Utilize as credenciais do seu tenant para logar no Power BI, depois siga as configurações abaixo:
 
 - Output alias: Digite um nome para seu Job. ex: pbioutput
 - Group workshop: Selecione **"My workshop"**
@@ -166,7 +167,8 @@ ___
 Novamente dentro do seu Stream Analytics job click em **"Edit query"** utilize o código abaixo e click em **"Save"**
 
 
-```SELECT
+```
+SELECT
     *
 INTO
     datalakeoutput
@@ -182,3 +184,9 @@ FROM
 ```
 
 ![img17](/img/query1.png)
+
+___
+
+Dentro do seu Stream Analytics job click em **"Start"** utilize o código abaixo e click em **"Save"**
+
+![img18](/img/streamstart1.png)
