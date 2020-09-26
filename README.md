@@ -125,3 +125,5 @@ Dentro do seu Stream Analytics job click em **"Input"** em seguida click em **"+
 
 ![img13](/img/input1.png)
 
+![img14](/img/input2.png)
+
