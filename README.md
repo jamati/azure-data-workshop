@@ -92,7 +92,7 @@ ___
 
 ___
 
-> 6. Vamos criar nosso Stream Analytics Job
+> 6. Vamos criar nosso Stream Analytics job
 
 Dentro do seu resource group criado anteriormente click em **"+Add"** digite **Stream Analytics job** então click em **"Create"** e siga as configurações abaixo:
 
@@ -104,4 +104,24 @@ Dentro do seu resource group criado anteriormente click em **"+Add"** digite **S
 - Streaming units: Deixe o padrão **"3"**
 
 ![img12](/img/stream01.png)
+
+
+> 7. Agora vamos criar nossos Inputs e Outputs do Stream Analytics job
+
+Dentro do seu Stream Analytics job click em **"Input"** em seguida click em **"+ Add stream input"** e selecione **"Event Hub"**
+
+- Input alias: Digite um nome para seu Job. ex: eventhubinput
+- Use a opção **"Select Event Hub from your subscriptions"**
+- Subscription: Selecione sua subscrição
+- Event Hub namespace: Selecione o seu Event Hub namespace criado nas etapas anteriores
+- Event Hub name: Selecione **"Use existing"** e selecione o Event Hub criado anteriormente
+- Event Hub policy name: Selecione **"Create new"** e pode deixar o nome sugerido ou alterar para o nome que desejar
+- Event Hub consumer group: Selecione **"Create new"** e pode deixar o nome sugerido ou alterar para o nome que desejar
+- Partition Key: Pode deixar esse campo em branco para esse workshop
+- Event serialization format: Deixar o padrão **"JSON"**
+- Encoding: Deixar o padrão **"UTF-8"**
+- Event compression type: Deixar o padrão **"Nome"**
+- Click em **"Save"**
+
+![img13](/img/input01.png)
 
