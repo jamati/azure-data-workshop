@@ -65,23 +65,15 @@ Dentro do seu resource group criado anteriormente click em **"+Add"** digite **S
 - Replication: Aqui você deve selecionar o tipo de replicação. Para esse workshop vou utilizar **"Locally-redundant storage"**
 - Blob access tier: Aqui você seleciona o tipo de acesso. Para esse workshop vou utilizar **"Hot"**
 
-- Após preencher os campos click em **"Next: Networking"**
+- Após preencher os campos click na aba superior **"Advanced"**
 
 ![img7](/img/storageaccount.GIF)
 
-![img8](/img/storageaccount1.png)
-
-- Em **"Networking"** deixe as opções padrão e click em **"Next: Data protection"**
-
-![img9](/img/storageaccount2.png)
-
-- Em **"Data protection"** deixe as opções padrão e click em **"Next: Advanced"** 
-
-![img10](/img/storageaccount3.png)
+![img8](/img/storageaccount01.png)
 
 - Em **"Advanced"** na opção **"Data Lake Storage Gen2"** click em  **"Enabled"** e depois click em **"Review + Create"**, após o review click em **"Create"**
 
-![img11](/img/storageaccount04.png)
+![img9](/img/storageaccount04.png)
 
 
 ___
@@ -93,9 +85,9 @@ ___
 - Uma vez logado encontre o Data Lake que você acabou de criar
 - Click com o botão da direita do mouse e click em **"Create Blob Container"**
 
-![img12](/img/explorer1.png)
+![img10](/img/explorer1.png)
 
 - Crie dois **"Blob Containers"** um chamado **"rawdata"** e outro **"transformeddata"**
 
-![img13](/img/explorer2.png)
+![img11](/img/explorer2.png)
 
