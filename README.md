@@ -75,7 +75,6 @@ Dentro do seu resource group criado anteriormente click em **"+Add"** digite **S
 
 ![img9](/img/storageaccount04.png)
 
-
 ___
 
 > 5. Gerenciar meu Azure Data Lake com o Azure Storage Explorer 
@@ -90,4 +89,19 @@ ___
 - Crie dois **"Blob Containers"** um chamado **"rawdata"** e outro **"transformeddata"**
 
 ![img11](/img/explorer2.png)
+
+___
+
+> 6. Vamos criar nosso Stream Analytics Job
+
+Dentro do seu resource group criado anteriormente click em **"+Add"** digite **Stream Analytics job** então click em **"Create"** e siga as configurações abaixo:
+
+- Job Name: Digite um nome para seu Job. ex: streamdataworkshop 
+- Subscription: Selecione sua subscrição
+- Resource group: Selecione o resource group criado anteriormente
+- Location: Selecione uma região onde será feito o deployment do seu Job. Recomendo East US por questões de custos.
+- Hosting environment: Selecione **"Cloud"**
+- Streaming units: Deixe o padrão **"3"**
+
+![img12](/img/stream01.png)
 
