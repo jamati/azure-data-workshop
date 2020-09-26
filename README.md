@@ -1,4 +1,4 @@
-# Azure Data Workshop 
+# Azure Data Workshop (Preview) :stuck_out_tongue_winking_eye:
 Este workshop contém instruções sobre como criar os recursos necessários para fazer a ingestão dos dados até a apresentação conforme a arquitetura abaixo:
 
 ![img1](/img/arquitetura.png)
