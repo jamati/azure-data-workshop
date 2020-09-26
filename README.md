@@ -105,10 +105,11 @@ Dentro do seu resource group criado anteriormente click em **"+Add"** digite **S
 
 ![img12](/img/stream01.png)
 
+___
 
 > 7. Agora vamos criar nossos Inputs e Outputs do Stream Analytics job
 
-Dentro do seu Stream Analytics job click em **"Input"** em seguida click em **"+ Add stream input"** e selecione **"Event Hub"**
+Dentro do seu Stream Analytics job click em **"Inputs"** em seguida click em **"+ Add stream input"** e selecione **"Event Hub"**
 
 - Input alias: Digite um nome para seu Job. ex: eventhubinput
 - Use a opção **"Select Event Hub from your subscriptions"**
@@ -127,3 +128,57 @@ Dentro do seu Stream Analytics job click em **"Input"** em seguida click em **"+
 
 ![img14](/img/input2.png)
 
+___
+
+Novamente dentro do seu Stream Analytics job click em **"Inputs"** em seguida click em **"+ Add stream input"** e selecione **"Blob storage/ADLS Gen2"**
+
+- Use a opção **"Select storage from your subscriptions"**
+- Subscription: Selecione sua subscrição
+- Storage account: Selecione a sua Storage account criada nas etapas anteriores
+- Container: Selecione **"Use existing"** e selecione o container **"rawdata"** criado anteriormente
+- Path pattern: Digite **{date}** 
+- Data format: Selecione o padrão **YYYY/MM/DD**
+- Event serialization format: Deixar o padrão **"JSON"**
+- Encoding: Deixar o padrão **"UTF-8"**
+- Format: Selecione **"Line separated"**
+- Minimum rows: Digite **"1"**
+- Maximum time: Para Hours digite **"0"** e para Minutes digite **"5"**
+- Authentication mode: Selecione **"Connection string"**
+- Click em **"Save"**
+
+![img15](/img/input3.png)
+
+___
+
+Mais uma vez dentro do seu Stream Analytics job click em **"Outputs"** em seguida click em **"+ Add"** selecione **"Power BI"** e click em **"Authorize"**
+
+- Output alias: Digite um nome para seu Job. ex: pbioutput
+- Group workshop: Selecione **"My workshop"**
+- Dataset name: Digite um nome para seu Dataset. ex: dataworkshop 
+- Table name: Digite um nome para seu Dataset. ex: dataworkshop 
+- Authentication mode: Selecione **"User token"** 
+- Click em **"Save"**
+
+![img16](/img/output1.png)
+
+___
+
+Novamente dentro do seu Stream Analytics job click em **"Edit query"** utilize o código abaixo e click em **"Save"**
+
+
+```SELECT
+    *
+INTO
+    datalakeoutput
+FROM
+    eventhubinput
+
+SELECT
+    *
+INTO
+    pbioutput
+FROM
+    eventhubinput
+```
+
+![img17](/img/query1.png)
