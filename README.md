@@ -230,6 +230,7 @@ ___
                 }
               }
 ```
+![img21](/img/geradormensagem1.png)
 - Click em **"Submit"**
 
 Isto irá gerar 1000 mensagens que serão consumidas pelo seu Event Hub
