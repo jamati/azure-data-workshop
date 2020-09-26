@@ -123,5 +123,5 @@ Dentro do seu Stream Analytics job click em **"Input"** em seguida click em **"+
 - Event compression type: Deixar o padrão **"Nome"**
 - Click em **"Save"**
 
-![img13](/img/input01.png)
+![img13](/img/input1.png)
 
