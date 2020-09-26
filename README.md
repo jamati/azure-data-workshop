@@ -287,3 +287,65 @@ Click em **"Next: Git configuration"**
 ![img30](/img/datafactory1.png)
 
 ![img31](/img/datafactory2.png)
+
+- Após a criação entre no seu **Data Factory** e click em **"Author & Monitor"**. Após clicar uma nova aba irá se abrir te derecionando para o **Data Factory workspace**
+
+![img32](/img/datafactory3.png)
+
+- Agora é hora de criar nosso primeiro pipeline. Click em **"Create pipeline"**
+- Name: Digite um nome para seu pipeline. ex: jason_to_CSV
+- Click em **"Move & transform"** para expandir as opções. Agora arraste a opção **"Copy data"** para o espaço em branco do workspace.
+
+![img33](/img/datafactory4.png)
+
+- Agora click em **"Source"** e em seguida click em **"+ New"**
+- Click em **"Azure"** em seguida selecione **"Azure Data Lake Storage Gen2"** e click em **"Continue"**
+
+![img34](/img/datasource1.png)
+
+- Selecione o formato do dado. Para esse workshop nosso source está em JSON então selecione **JSON** e click em **"Continue"**
+- Agora em **"Linked service"** selecione **"+ New"** e preencha as informações solicitadas
+- Name: Digite um nome para seu linked service. ex: AzureDataLake_raw
+- Azure Subscription: Selecione sua **subscrição**
+- Storage account name: Selecione seu **Data Lake**
+- Click em **"Test connection"** se a conexão for feita com sucesso click em **"Create"**
+
+![img35](/img/datasource2.png)
+
+- Em **"Set properties"** click no ícone da pasta e selecione seu container **rawdata** e depois click em **"OK"**
+
+![img36](/img/datasource3.png)
+
+- Em **"File path type"** selecione a opção **"Wildcard file path"** e digite um nome para a pasta. ex: **iot**
+
+![img37](/img/datasource4.png)
+
+
+- Agora click em **"Sink"** e em seguida click em **"+ New"**
+- Click em **"Azure"** em seguida selecione **"Azure Data Lake Storage Gen2"** e click em **"Continue"**
+- Selecione o formato do dado. Para esse workshop nosso sink será em CSV então selecione **CSV** e click em **"Continue"**
+- Agora em **"Linked service"** selecione **"+ New"** e preencha as informações solicitadas
+- Name: Digite um nome para seu linked service. ex: AzureDataLake_transformeddata
+- Azure Subscription: Selecione sua **subscrição**
+- Storage account name: Selecione seu **Data Lake**
+- Click em **"Test connection"** se a conexão for feita com sucesso click em **"Create"**
+- Em **"Set properties"** click no ícone da pasta e selecione seu container **transformeddata** e depois click em **"OK"**
+
+- Agora click em **"Mapping"** e verifique se o schema de dados está OK.
+
+![img38](/img/datamapping1.png)
+
+### Agora vamos executar nosso pipeline. ###
+
+- Primeiro precisamos ligar nosso **"Data flow debug"**
+- Agora é só clicar em **"Debug"**
+
+![img39](/img/debug1.png)
+
+![img40](/img/debug2.png)
+
+- Agora você já pode verificar seus dados transformados utilizando o **Azure Storage Explorer**
+
+![img41](/img/explorer4.png)
+
+___
