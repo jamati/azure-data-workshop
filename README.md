@@ -169,14 +169,20 @@ Novamente dentro do seu Stream Analytics job click em **"Edit query"** utilize o
 
 ```
 SELECT
-    *
+    TRY_CAST (sensor_temp as bigint) as Temperatura,
+    TRY_CAST (sensor_id as bigint) as SensorID,
+    TRY_CAST (sensor_hum as bigint) as Humidade,
+    TRY_CAST (sensor_status as nvarchar(max)) as Status,
+    TRY_CAST (EventProcessedUtcTime as datetime) as Data_Hora
 INTO
     datalakeoutput
 FROM
     eventhubinput
 
 SELECT
-    *
+    TRY_CAST (sensor_temp as bigint) as Temperatura,
+    TRY_CAST (sensor_id as bigint) as SensorID
+    
 INTO
     pbioutput
 FROM
@@ -190,3 +196,40 @@ ___
 Dentro do seu Stream Analytics job click em **"Start"** utilize o código abaixo e click em **"Save"**
 
 ![img18](/img/streamstart1.png)
+
+___
+
+> 8. Agora vamos simular dados entrando no nosso Event Hub e visualizá-los no PBI e no nosso Datalake
+
+- Primeiro vamos simular alguns dados através deste link: https://eventhubdatagenerator.azurewebsites.net/
+- No campo **"Event Hub Connection String"** preencha com os dados da sua connection string localizada aqui:
+![img19](/img/connectionstring1.png)
+- No campo **"Event Hub Namespace"** preencha com o nome do seu Event Hub namespace:
+![img20](/img/namespace1.png)
+- No campo **"Number of messanges"** digite **1000**
+- No campo **"Fake Data Methods"** preencha com o código abaixo:
+
+```
+            {
+                "sensor_id":{
+                  "faker": {
+                    "fake": "{{random.number(100)}}"
+                  }
+                },
+                "sensor_temp": {
+                  "type": "integer", "minimum": "5", "maximum": "45"
+                },
+                "sensor_hum": {
+                  "type": "integer", "minimum": "10", "maximum": "100"
+                },
+                "sensor_status": {
+                  "type": "string",
+                  "faker": {
+                    "random.arrayElement": [["OK", "WARN", "FAIL"]]
+                  }
+                }
+              }
+```
+- Click em **"Submit"**
+
+Isto irá gerar 1000 mensagens que serão consumidas pelo seu Event Hub
