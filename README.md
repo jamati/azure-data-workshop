@@ -173,7 +173,7 @@ SELECT
     TRY_CAST (sensor_id as bigint) as SensorID,
     TRY_CAST (sensor_hum as bigint) as Humidade,
     TRY_CAST (sensor_status as nvarchar(max)) as Status,
-    TRY_CAST (EventProcessedUtcTime as datetime) as Data_Hora
+    TRY_CAST (EventEnqueuedUtcTime as datetime) as Data_Hora
 INTO
     datalakeoutput
 FROM
@@ -181,7 +181,8 @@ FROM
 
 SELECT
     TRY_CAST (sensor_temp as bigint) as Temperatura,
-    TRY_CAST (sensor_id as bigint) as SensorID
+    TRY_CAST (sensor_id as bigint) as SensorID,
+    TRY_CAST (EventEnqueuedUtcTime as datetime) as Data_Hora
     
 INTO
     pbioutput
@@ -199,14 +200,33 @@ Dentro do seu Stream Analytics job click em **"Start"** utilize o código abaixo
 
 ___
 
-> 8. Agora vamos simular dados entrando no nosso Event Hub e visualizá-los no PBI e no nosso Datalake
+> 8. Agora criar seu Dashboard no PBI (Power BI) 
+
+- Primeiro abra esse link: https://powerbi.microsoft.com/en-us/ e click em **"Sign in"** em seguida entre com seu usuário e senha do tenant do seu PBI
+- Uma vez logado você deve clicar em **"My workspace"**, depois em **"Datasets + dataflows"** encontre o seu Dataset e click nos 3 pontos verticais em seguida click em **"Edit"**
+![img19](/img/pbi2.png)
+- Em **"Edit streaming dataset"** tenha certeza que o time de dados está de acordo com suas configurações feitas na query do **"Stream Analytics"**
+![img20](/img/pbi3.png)
+- Agora novamente em **"My workspace"** click em **"+ New"** e em seguida selecione **"Dashboard"**
+![img21](/img/pbi4.png)
+- Digite um nome para sua Dashboard ex: Data Workshop
+- Agora click em **"Edit"** em seguida click em **"+ Add a tile"** selecione **"REAL-TIME DATA"** e click em **"Next"** 
+![img22](/img/pbi5.png)
+- Nesta etapa você deve selecionar o Dataset criado pelo **"Stream Analytics"** 
+![img23](/img/pbi6.png)
+- Agora você pode selecionar as visualizações que precisar para sua Dashboard 
+![img24](/img/pbi7.png)
+
+___
+
+> 9. Agora vamos simular dados entrando no nosso Event Hub 
 
 - Primeiro vamos simular alguns dados através deste link: https://eventhubdatagenerator.azurewebsites.net/
 - No campo **"Event Hub Connection String"** preencha com os dados da sua connection string localizada aqui:
-![img19](/img/connectionstring1.png)
+![img25](/img/connectionstring1.png)
 - No campo **"Event Hub Namespace"** preencha com o nome do seu Event Hub namespace:
-![img20](/img/namespace1.png)
-- No campo **"Number of messanges"** digite **1000**
+![img26](/img/namespace1.png)
+- No campo **"Number of messanges"** digite **5**
 - No campo **"Fake Data Methods"** preencha com o código abaixo:
 
 ```
@@ -230,7 +250,16 @@ ___
                 }
               }
 ```
-![img21](/img/geradormensagem1.png)
+![img27](/img/geradormensagem1.png)
 - Click em **"Submit"**
 
-Isto irá gerar 1000 mensagens que serão consumidas pelo seu Event Hub
+Isto irá gerar 5 mensagens que serão consumidas pelo seu Event Hub. As mesmas já podem ser vistas na sua Dashboard do PBI e também dentro do seu Data Lake.
+
+Você pode repetir esse processo quantas vezes quiser para gerar mais dados.
+
+![img28](/img/pbi8.png)
+
+![img29](/img/explorer3.png)
+
+___
+
