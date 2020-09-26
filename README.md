@@ -204,17 +204,23 @@ ___
 
 - Primeiro abra esse link: https://powerbi.microsoft.com/en-us/ e click em **"Sign in"** em seguida entre com seu usuário e senha do tenant do seu PBI
 - Uma vez logado você deve clicar em **"My workspace"**, depois em **"Datasets + dataflows"** encontre o seu Dataset e click nos 3 pontos verticais em seguida click em **"Edit"**
+
 ![img19](/img/pbi2.png)
 - Em **"Edit streaming dataset"** tenha certeza que o time de dados está de acordo com suas configurações feitas na query do **"Stream Analytics"**
+
 ![img20](/img/pbi3.png)
 - Agora novamente em **"My workspace"** click em **"+ New"** e em seguida selecione **"Dashboard"**
+
 ![img21](/img/pbi4.png)
 - Digite um nome para sua Dashboard ex: Data Workshop
 - Agora click em **"Edit"** em seguida click em **"+ Add a tile"** selecione **"REAL-TIME DATA"** e click em **"Next"** 
+
 ![img22](/img/pbi5.png)
 - Nesta etapa você deve selecionar o Dataset criado pelo **"Stream Analytics"** 
+
 ![img23](/img/pbi6.png)
 - Agora você pode selecionar as visualizações que precisar para sua Dashboard 
+
 ![img24](/img/pbi7.png)
 
 ___
