@@ -1,9 +1,9 @@
 # Azure Data Workshop (Preview) :stuck_out_tongue_winking_eye:
-Este workshop contém instruções sobre como criar os recursos necessários para fazer a ingestão dos dados até a apresentação conforme a arquitetura abaixo:
+Este workshop contém instruções sobre como criar os recursos necessários para fazer da ingestão dos dados até a apresentação conforme a arquitetura abaixo:
 
 ![img1](/img/arquitetura.png)
 
-## Praparar o ambiente ##
+## Criando o ambiente ##
 
 > 1. Crie sua conta gratuita no Azure
 
@@ -16,8 +16,8 @@ ___
 No portal do Azure Portal click em **"Create a resource"** e então digite **Resource Group** . Click em **"Create"** 
 
 - Subscription: Selecione sua subscrição
-- Resource group: Digite um nome para o sue resource. Ex: data-workshop
-- Selecione uma região. Aqui você pode utilizar qualquer região disponível.   
+- Resource group: Digite um nome para o sua resource. ex: data-workshop
+- Region: Aqui você pode utilizar qualquer região disponível.   
 
 ![img2](/img/resourcegroup.GIF)
 
@@ -27,24 +27,25 @@ ___
 
 > 3. Criar o Event Hubs namespace
 
-No portal do Azure Portal click em **"Create a resource"** e então digite **Event Hubs** . Click em **"Create"** e siga as configurações abaixo: 
+No portal do Azure Portal click em **"Create a resource"** e então digite **Event Hubs**. Click em **"Create"** e siga as configurações abaixo: 
 
 - Subscription: Selecione sua subscrição
 - Resource group: Selecione o resource group criado na etapa anterior
 - Namespace name: Digite um nome para seu namespace. ex: eventhubworkshop
-- Region: Selecione uma região onde será feito o deployment do seu workspace. Recomendo East US por questões de custos.
+- Location: Selecione uma região onde será feito o deployment do seu workspace. Recomendo East US por questões de custos.
 - Pricing tier: Aqui você deve selecionar tier do Event Hub. Para esse workshop vou utilizar o "Standard".
 - Throughput Units: Aqui você define quantas unidades são necessárias para nossa carga de trabalho. Para esse workshop vou utilizar "1"
+- Click em **"Review + create"**
 
 ![img4](/img/eventhubs.png)
 
 ### Agora você precisa criar o Event Hub ###
 
-Uma vez dentro do Event Hubs namespace que você acabou de criar click em **"+ Event Hub"** e então siga as configurações abaixo e depois click em **"Create"**
+Uma vez dentro do Event Hubs namespace que você acabou de criar click em **"+ Event Hub"** e então siga as configurações abaixo. Ao finalizar click em **"Create"**
 
 - Name: Digite um nome para seu Event Hub. ex: eventhub1
-- Partition Count: Selecione o resource group criado na etapa anterior
-- Message Retention: Digite um nome para seu namespace. ex: eventhubworkshop
+- Partition Count: Vamos deixar o padrão **"1"**
+- Message Retention: Vamos deixar o padrão **"1"**
 - Capture: Selecione **"Off"**
 
 ![img5](/img/eventhub1.png)
@@ -54,12 +55,12 @@ ___
 
 > 4. Criar o seu Data Lake
 
-Dentro do seu resource group criado anteriormente click em **"+Add"** digite **Storage Account** então click em **"Create"** e siga as configurações abaixo:
+Dentro do seu resource group criado anteriormente click em **"+Add"** digite **Storage Account** click em **"Create"** e então siga as configurações abaixo:
 
 - Subscription: Selecione sua subscrição
 - Resource group: Selecione o resource group criado anteriormente
 - Storage account name: Digite um nome para sua storage account. ex: datalakeworkshop
-- Region: Selecione uma região onde será feito o deployment do seu workspace. Recomendo East US por questões de custos.
+- Location: Selecione uma região onde será feito o deployment do seu workspace. Recomendo East US por questões de custos.
 - Performance: Aqui você deve selecionar performance. Para esse workshop vou utilizar o **"Standard"**.
 - Account kind: Aqui você deve selecionar o tipo. Para esse workshop vou utilizar **"StorageV2"**
 - Replication: Aqui você deve selecionar o tipo de replicação. Para esse workshop vou utilizar **"Locally-redundant storage"**
@@ -102,12 +103,15 @@ Dentro do seu resource group criado anteriormente click em **"+Add"** digite **S
 - Location: Selecione uma região onde será feito o deployment do seu Job. Recomendo East US por questões de custos.
 - Hosting environment: Selecione **"Cloud"**
 - Streaming units: Deixe o padrão **"3"**
+- Click em **"Create"**
 
 ![img12](/img/stream01.png)
 
 ___
 
 > 7. Agora vamos criar nossos Inputs e Outputs do Stream Analytics job
+
+### Inputs ###
 
 Dentro do seu Stream Analytics job click em **"Inputs"** em seguida click em **"+ Add stream input"** e selecione **"Event Hub"**
 
@@ -130,7 +134,9 @@ Dentro do seu Stream Analytics job click em **"Inputs"** em seguida click em **"
 
 ___
 
-Novamente dentro do seu Stream Analytics job click em **"Inputs"** em seguida click em **"+ Add stream input"** e selecione **"Blob storage/ADLS Gen2"**
+### Agora para Output ### 
+
+Novamente dentro do seu Stream Analytics job click em **"Outputs"** em seguida click em **"+ Add"** e selecione **"Blob storage/ADLS Gen2"**
 
 - Use a opção **"Select storage from your subscriptions"**
 - Subscription: Selecione sua subscrição
@@ -164,6 +170,8 @@ Utilize as credenciais do seu tenant para logar no Power BI, depois siga as conf
 
 ___
 
+### Query ###
+
 Novamente dentro do seu Stream Analytics job click em **"Edit query"** utilize o código abaixo e click em **"Save"**
 
 
@@ -171,7 +179,7 @@ Novamente dentro do seu Stream Analytics job click em **"Edit query"** utilize o
 SELECT
     TRY_CAST (sensor_temp as bigint) as Temperatura,
     TRY_CAST (sensor_id as bigint) as SensorID,
-    TRY_CAST (sensor_hum as bigint) as Humidade,
+    TRY_CAST (sensor_hum as bigint) as Umidade,
     TRY_CAST (sensor_status as nvarchar(max)) as Status,
     TRY_CAST (EventEnqueuedUtcTime as datetime) as Data_Hora
 INTO
@@ -181,7 +189,7 @@ FROM
 
 SELECT
     TRY_CAST (sensor_temp as bigint) as Temperatura,
-    TRY_CAST (sensor_id as bigint) as SensorID,
+    TRY_CAST (sensor_hum as bigint) as Umidade,
     TRY_CAST (EventEnqueuedUtcTime as datetime) as Data_Hora
     
 INTO
@@ -192,9 +200,11 @@ FROM
 
 ![img17](/img/query1.png)
 
+- Click em **"Save query"**
+
 ___
 
-Dentro do seu Stream Analytics job click em **"Start"** utilize o código abaixo e click em **"Save"**
+Dentro do seu Stream Analytics job click em **"Start"** 
 
 ![img18](/img/streamstart1.png)
 
@@ -206,7 +216,7 @@ ___
 - Uma vez logado você deve clicar em **"My workspace"**, depois em **"Datasets + dataflows"** encontre o seu Dataset e click nos 3 pontos verticais em seguida click em **"Edit"**
 
 ![img19](/img/pbi2.png)
-- Em **"Edit streaming dataset"** tenha certeza que o time de dados está de acordo com suas configurações feitas na query do **"Stream Analytics"**
+- Em **"Edit streaming dataset"** tenha certeza que o tipo de dados está de acordo com suas configurações feitas na query do **"Stream Analytics"**
 
 ![img20](/img/pbi3.png)
 - Agora novamente em **"My workspace"** click em **"+ New"** e em seguida selecione **"Dashboard"**
@@ -288,7 +298,7 @@ Click em **"Next: Git configuration"**
 
 ![img31](/img/datafactory2.png)
 
-- Após a criação entre no seu **Data Factory** e click em **"Author & Monitor"**. Após clicar uma nova aba irá se abrir te derecionando para o **Data Factory workspace**
+- Após a criação entre no seu **Data Factory** e click em **"Author & Monitor"**. Após clicar uma nova aba irá se abrir derecionando-o para o **Data Factory workspace**
 
 ![img32](/img/datafactory3.png)
 
