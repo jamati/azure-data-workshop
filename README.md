@@ -326,7 +326,7 @@ Click em **"Next: Git configuration"**
 
 ![img36](/img/datasource3.png)
 
-- Em **"File path type"** selecione a opção **"Wildcard file path"** e digite um nome para a pasta. ex: **iot**
+- Em **"File path type"** selecione a opção **"Wildcard file path"**
 
 ![img37](/img/datasource4.png)
 
