@@ -363,7 +363,7 @@ Click em **"Next: Git configuration"**
 
 ### Agora vamos executar nosso pipeline. ###
 
-- Agora é só clicar em **"Debug"**
+- Agora é só clicar em **"Debug"**. Para o debug funcionar o **"Data flow debug"** tem que estar ligado.
 
 ![img42](/img/debug1.png)
 
