@@ -293,7 +293,6 @@ Click em **"Next: Git configuration"**
 
 - Nesta etapa você pode configurar um repositório para seu código. Para esse workshop vamos marcar a opção **"Configure Git Later"** clicar em **"Review + create"** e em seguida clicar em **"Create"**
 
-
 ![img30](/img/datafactory1.png)
 
 ![img31](/img/datafactory2.png)
@@ -302,12 +301,14 @@ Click em **"Next: Git configuration"**
 
 ![img32](/img/datafactory3.png)
 
+### Pipeline ###
 - Agora é hora de criar nosso primeiro pipeline. Click em **"Create pipeline"**
 - Name: Digite um nome para seu pipeline. ex: jason_to_CSV
 - Click em **"Move & transform"** para expandir as opções. Agora arraste a opção **"Copy data"** para o espaço em branco do workspace.
 
 ![img33](/img/datafactory4.png)
 
+### Source ###
 - Agora click em **"Source"** e em seguida click em **"+ New"**
 - Click em **"Azure"** em seguida selecione **"Azure Data Lake Storage Gen2"** e click em **"Continue"**
 
@@ -330,16 +331,27 @@ Click em **"Next: Git configuration"**
 
 ![img37](/img/datasource4.png)
 
-
-- Agora click em **"Sink"** e em seguida click em **"+ New"**
+### Sink ###
+- Agora click em **"Sink"** e em seguida click em **"+ New"** ### 
 - Click em **"Azure"** em seguida selecione **"Azure Data Lake Storage Gen2"** e click em **"Continue"**
-- Selecione o formato do dado. Para esse workshop nosso sink será em CSV então selecione **CSV** e click em **"Continue"**
-- Agora em **"Linked service"** selecione **"+ New"** e preencha as informações solicitadas
+- Selecione o formato do dado. Para esse workshop nosso sink será em csv então selecione **CSV** e click em **"Continue"**
+- Agora em **"Linked service"** em **"Name"** digite um nome. ex: CSV e depois em **"Linked service"** selecione **"+ New"** e preencha as informações solicitadas
 - Name: Digite um nome para seu linked service. ex: AzureDataLake_transformeddata
 - Azure Subscription: Selecione sua **subscrição**
 - Storage account name: Selecione seu **Data Lake**
 - Click em **"Test connection"** se a conexão for feita com sucesso click em **"Create"**
 - Em **"Set properties"** click no ícone da pasta e selecione seu container **transformeddata** e depois click em **"OK"**
+- Em **""File extension"** altere para **".csv"**
+
+![img38](/img/sinkdata1.png)
+
+- E dentro do seu dataset **"csv"** em **"Connection"** marque a opção **"First row as header"**
+
+![img39](/img/sinkdata2.png)
+
+- Click em **"Schema"** e em seguida click em **"Import schema"**. Você já deve conseguir visualizar as colunas do seu arquivo CSV
+
+![img39](/img/sinkdata3.png)
 
 - Agora click em **"Mapping"** e verifique se o schema de dados está OK.
 
@@ -347,7 +359,6 @@ Click em **"Next: Git configuration"**
 
 ### Agora vamos executar nosso pipeline. ###
 
-- Primeiro precisamos ligar nosso **"Data flow debug"**
 - Agora é só clicar em **"Debug"**
 
 ![img39](/img/debug1.png)
