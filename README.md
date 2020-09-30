@@ -336,7 +336,7 @@ Click em **"Next: Git configuration"**
 ![img37](/img/datasource4.png)
 
 ### Sink ###
-- Agora click em **"Sink"** e em seguida click em **"+ New"** ### 
+- Agora click em **"Sink"** e em seguida click em **"+ New"**
 - Click em **"Azure"** em seguida selecione **"Azure Data Lake Storage Gen2"** e click em **"Continue"**
 - Selecione o formato do dado. Para esse workshop nosso sink será em csv então selecione **CSV** e click em **"Continue"**
 - Agora em **"Set properties"** no campo **"Name"** digite um nome. ex: CSV e depois em **"Linked service"** selecione **"+ New"** e preencha as informações solicitadas
