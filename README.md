@@ -308,20 +308,24 @@ Click em **"Next: Git configuration"**
 
 ![img33](/img/datafactory4.png)
 
+- Agora vamos ligar nosso **"Data flow debug"** que é o cluster que irá executar nossas etapas de transformação dos nossos dados
+
+![img34](/img/dataflowdebug1.png)
+
 ### Source ###
 - Agora click em **"Source"** e em seguida click em **"+ New"**
 - Click em **"Azure"** em seguida selecione **"Azure Data Lake Storage Gen2"** e click em **"Continue"**
 
-![img34](/img/datasource1.png)
+![img35](/img/datasource1.png)
 
 - Selecione o formato do dado. Para esse workshop nosso source está em JSON então selecione **JSON** e click em **"Continue"**
-- Agora em **"Linked service"** selecione **"+ New"** e preencha as informações solicitadas
+- Agora em **"Set properties"** no campo **"Name"** digite um nome. ex: JSON e depois em **"Linked service"** selecione **"+ New"** e preencha as informações solicitadas
 - Name: Digite um nome para seu linked service. ex: AzureDataLake_raw
 - Azure Subscription: Selecione sua **subscrição**
 - Storage account name: Selecione seu **Data Lake**
 - Click em **"Test connection"** se a conexão for feita com sucesso click em **"Create"**
 
-![img35](/img/datasource2.png)
+![img36](/img/datasource2.png)
 
 - Em **"Set properties"** click no ícone da pasta e selecione seu container **rawdata** e depois click em **"OK"**
 
@@ -335,7 +339,7 @@ Click em **"Next: Git configuration"**
 - Agora click em **"Sink"** e em seguida click em **"+ New"** ### 
 - Click em **"Azure"** em seguida selecione **"Azure Data Lake Storage Gen2"** e click em **"Continue"**
 - Selecione o formato do dado. Para esse workshop nosso sink será em csv então selecione **CSV** e click em **"Continue"**
-- Agora em **"Linked service"** em **"Name"** digite um nome. ex: CSV e depois em **"Linked service"** selecione **"+ New"** e preencha as informações solicitadas
+- Agora em **"Set properties"** no campo **"Name"** digite um nome. ex: CSV e depois em **"Linked service"** selecione **"+ New"** e preencha as informações solicitadas
 - Name: Digite um nome para seu linked service. ex: AzureDataLake_transformeddata
 - Azure Subscription: Selecione sua **subscrição**
 - Storage account name: Selecione seu **Data Lake**
@@ -351,22 +355,22 @@ Click em **"Next: Git configuration"**
 
 - Click em **"Schema"** e em seguida click em **"Import schema"**. Você já deve conseguir visualizar as colunas do seu arquivo CSV
 
-![img39](/img/sinkdata3.png)
+![img40](/img/sinkdata3.png)
 
 - Agora click em **"Mapping"** e verifique se o schema de dados está OK.
 
-![img38](/img/datamapping1.png)
+![img41](/img/datamapping1.png)
 
 ### Agora vamos executar nosso pipeline. ###
 
 - Agora é só clicar em **"Debug"**
 
-![img39](/img/debug1.png)
+![img42](/img/debug1.png)
 
-![img40](/img/debug2.png)
+![img43](/img/debug2.png)
 
 - Agora você já pode verificar seus dados transformados utilizando o **Azure Storage Explorer**
 
-![img41](/img/explorer4.png)
+![img44](/img/explorer4.png)
 
 ___
