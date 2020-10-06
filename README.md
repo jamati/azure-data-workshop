@@ -12,6 +12,7 @@ ___
 - Criar um modelo de ML utilizando dados transformados dentro do seu Data Lake
 
 ![img1](/img/arquitetura.png)
+___
 
 Esta é a arquitetura que iremos criar neste workshop.
 

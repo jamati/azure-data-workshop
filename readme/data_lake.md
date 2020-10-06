@@ -18,6 +18,7 @@ Dentro do seu resource group criado anteriormente click em **"+Add"** digite **S
 ![img7](/img/storageaccount.GIF)
 
 ![img8](/img/storageaccount01.png)
+___
 
 - Em **"Advanced"** na opção **"Data Lake Storage Gen2"** click em  **"Enabled"** e depois click em **"Review + Create"**, após o review click em **"Create"**
 
@@ -29,10 +30,12 @@ ___
 - Após a criação da sua Storage Account entre na mesma e click em **"Access Key"**
 
 ![img10](/img/storageaccount4.png)
+___
 
 - Cópie a **"Key 1"** em um notepad, pois vamos utilizá-la mais a frente
 
 ![img11](/img/storageaccount5.png)
+___
 
 > 3. Gerenciar meu Azure Data Lake com o Azure Storage Explorer 
 
@@ -42,6 +45,7 @@ ___
 - Click com o botão da direita do mouse e click em **"Create Blob Container"**
 
 ![img12](/img/explorer1.png)
+___
 
 - Crie dois **"Blob Containers"** um chamado **"rawdata"** e outro **"transformeddata"**
 

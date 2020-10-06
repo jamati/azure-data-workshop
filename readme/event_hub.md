@@ -13,6 +13,7 @@ No portal do Azure Portal click em **"Create a resource"** e então digite **Eve
 - Click em **"Review + create"**
 
 ![img4](/img/eventhubs.png)
+___
 
 > 2. Agora você precisa criar o Event Hub 
 
@@ -25,6 +26,7 @@ Uma vez dentro do Event Hubs namespace que você acabou de criar click em **"+ E
 
 ![img5](/img/eventhub1.png)
 ![img6](/img/eventhub2.png)
+___
 
 ## Próximo passo
 ___

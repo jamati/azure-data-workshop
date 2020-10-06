@@ -17,10 +17,12 @@ Click em **"Next: Git configuration"**
 ![img30](/img/datafactory1.png)
 
 ![img31](/img/datafactory2.png)
+___
 
 - Após a criação entre no seu **Data Factory** e click em **"Author & Monitor"**. Após clicar uma nova aba irá se abrir derecionando-o para o **Data Factory workspace**
 
 ![img32](/img/datafactory3.png)
+___
 
 > 2. Pipeline
 
@@ -29,10 +31,12 @@ Click em **"Next: Git configuration"**
 - Click em **"Move & transform"** para expandir as opções. Agora arraste a opção **"Copy data"** para o espaço em branco do workspace.
 
 ![img33](/img/datafactory4.png)
+___
 
 - Agora vamos ligar nosso **"Data flow debug"** que é o cluster que irá executar nossas etapas de transformação dos nossos dados
 
 ![img34](/img/dataflowdebug1.png)
+___
 
 > 3. Source
 
@@ -40,6 +44,7 @@ Click em **"Next: Git configuration"**
 - Click em **"Azure"** em seguida selecione **"Azure Data Lake Storage Gen2"** e click em **"Continue"**
 
 ![img35](/img/datasource1.png)
+___
 
 - Selecione o formato do dado. Para esse workshop nosso source está em JSON então selecione **JSON** e click em **"Continue"**
 - Agora em **"Set properties"** no campo **"Name"** digite um nome. ex: JSON e depois em **"Linked service"** selecione **"+ New"** e preencha as informações solicitadas
@@ -49,14 +54,17 @@ Click em **"Next: Git configuration"**
 - Click em **"Test connection"** se a conexão for feita com sucesso click em **"Create"**
 
 ![img36](/img/datasource2.png)
+___
 
 - Em **"Set properties"** click no ícone da pasta e selecione seu container **rawdata** e depois click em **"OK"**
 
 ![img36](/img/datasource3.png)
+___
 
 - Em **"File path type"** selecione a opção **"Wildcard file path"**
 
 ![img37](/img/datasource4.png)
+___
 
 > 4. Sink 
 
@@ -72,18 +80,22 @@ Click em **"Next: Git configuration"**
 - Em **""File extension"** altere para **".csv"**
 
 ![img38](/img/sinkdata1.png)
+___
 
 - E dentro do seu dataset **"csv"** em **"Connection"** marque a opção **"First row as header"**
 
 ![img39](/img/sinkdata2.png)
+___
 
 - Click em **"Schema"** e em seguida click em **"Import schema"**. Você já deve conseguir visualizar as colunas do seu arquivo CSV
 
 ![img40](/img/sinkdata3.png)
+___
 
 - Agora click em **"Mapping"** e verifique se o schema de dados está OK.
 
 ![img41](/img/datamapping1.png)
+___
 
 > 5. Agora vamos executar nosso pipeline
 
@@ -92,6 +104,7 @@ Click em **"Next: Git configuration"**
 ![img42](/img/debug1.png)
 
 ![img43](/img/debug2.png)
+___
 
 > 6. Agora você já pode verificar seus dados transformados utilizando o **Azure Storage Explorer**
 

@@ -10,14 +10,17 @@ Dentro do seu resource group criado anteriormente click em **"+Add"** digite **M
 - Click em **"Review + create"**
 
 ![img45](/img/ml01.png)
+___
 
 - Agora click no ícone do seu **Machine Learning**
 
 ![img46](/img/ml02.png)
+___
 
 - Agora click em **"Launch studio**
 
 ![img47](/img/ml03.png)
+___
 
 > 2. Agora você já está dentro do Azure Machine Learning Studio 
 
@@ -37,6 +40,7 @@ ___
     - Em seguida click em **"Next"**
 
     ![img16](/img/mldataset1.png)
+    ___
 
     - Em **'Datastore selection'** selecione **"Create new datastore"** e siga as configurações abaixo:
 
@@ -51,6 +55,7 @@ ___
         - Click em **'Create datastore'**
 
         ![img17](/img/mldataset2.png)
+        ___
 
         - Agora click em **'Browser'** e clique nas pastas até encontrar o arquivo CSV criado na etapa 7 do Data Factory
 
@@ -71,15 +76,15 @@ ___
         - Você precisa configurar colunas com o tipo correto de dados. **'String'** para colunas que contêm palavras e **'Integer'** para as colunas que contêm números conforme imagem abaixo:
 
         ![img19](/img/mldataset5.png)
+        ___
         
         - Em seguida click em **'Next'**
-        ___
+
 
         > 3. 3 - Confirmar os detalhes
 
         - Aqui basta confirmar as informações e click em **'Create'** 
-        ___
-
+        
 > 4. Selecionar o dataset
 
 - Agora que você já criou seu dataset selecione ele e click em **'Next'**
@@ -105,6 +110,7 @@ ___
         - Click em **'Create'**
 
         ![img21](/img/newcluster01.png)
+        ___
 
 - Em **'Select computer cluster'** selecione o cluster que criou na etapa anterior
 - Click em **'Next'**
@@ -128,6 +134,7 @@ ___
 - Como pode ser visto em **'Details'** o algoritmo escolhido foi o **'VotingEnsemble'** e obteve uma acurácia de 36.6%. **OBS.: Essa acurácia vai ficar baixa mesmo, pois estamos utilizando dados randômicos e isto nos impede de ter um melhor resultado. Nosso objetivo aqui é apenas seguir os passos para criar nosso modelo.***
 
 ![img24](/img/experiment2.png)
+___
 
  - Click em **'Data guardralls'**
  
@@ -140,14 +147,17 @@ ___
     - No algoritmo com melhor acurária no nosso caso o **'VotingEnsemble'** ja está habilitado o **'View explanation'** click nele. Ele irá te redirecionar para o **'Run 49'**
 
      ![img25](/img/mlresults1.png)
+     ___
 
     - No **'Explanations'** você consegue verificar quais colunas (features) tiveram o maior impacto no seu modelo.
 
     ![img26](/img/mlexplanation1.png)
+    ___
 
     - Click me **'Metrics'** para poder visualizar algumas métricas do seu modelo
 
     ![img27](/img/mlmetrics1.png)
+    ___
 
     - Em **Output + logs'** é possível verificar todos os logs de execução e seus outputs.
 
@@ -174,6 +184,7 @@ Quando estiver satisfeito com os resultados do seu modelo é hora de fazer o dep
     - Click em **'Deploy'**
 
     ![img29](/img/mldeploy1.png)
+    ___
 
     - Agora que o deployment terminou já estamos prontos para consumir nosso modelo
 
