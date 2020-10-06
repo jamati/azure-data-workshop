@@ -114,6 +114,5 @@ ___
 ![img18](/img/streamstart1.png)
 
 ## Próximo passo
-___
 
 [Gerar dados simulados para serem consumidos pelo Event Hub](./event_hub.md)

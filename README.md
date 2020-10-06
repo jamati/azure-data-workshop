@@ -27,4 +27,3 @@ ___
 > 6. [Criar nossa dashboard no PBI para visualizar nossos dados em stream](./readme/dashboard_pbi.md)
 > 7. [Criar nosso Azure Data Factory e transformar dados](./readme/data_factory.md)
 > 8. [Criar nosso Azure Machine Learning e criar nosso modelo de predição](./readme/ml.md)
-___

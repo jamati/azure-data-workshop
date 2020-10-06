@@ -53,6 +53,5 @@ ___
 ___
 
 ## Próximo passo
-___
 
 [Criando seu Stream Analytics e configurar nossos inputs e outputs](./stream_analytics.md)

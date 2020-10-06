@@ -20,6 +20,5 @@ No portal do Azure Portal click em **"Create a resource"** e então digite **Res
 ___
 
 ## Próximo passo
-___
 
 [Criar seu Event Hub](./event_hub.md)

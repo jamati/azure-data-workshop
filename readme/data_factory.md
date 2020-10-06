@@ -112,6 +112,5 @@ ___
 ___
 
 ## Próximo passo
-___
 
 [Criar nosso Azure Machine Learning e criar nosso modelo de predição](./ml.md)

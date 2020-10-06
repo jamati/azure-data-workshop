@@ -29,6 +29,5 @@ Uma vez dentro do Event Hubs namespace que você acabou de criar click em **"+ E
 ___
 
 ## Próximo passo
-___
 
 [Criar nosso seu Data Lake, gerenciado e criar nossos containers](./data_lake.md)

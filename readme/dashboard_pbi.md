@@ -37,6 +37,5 @@ ___
 ___
 
 ## Próximo passo
-___
 
 [Criar nosso Azure Data Factory e transformar alguns dados](./data_factory.md)

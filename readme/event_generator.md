@@ -52,6 +52,5 @@ Você pode repetir esse processo quantas vezes quiser para gerar mais dados.
 ___
 
 ## Próximo passo
-___
 
 [Criar nossa dashboard no PBI para visualizar nossos dados em stream](./dashboard_pbi.md)
