@@ -22,7 +22,7 @@ ___
 > 1. [Preparando seu ambiente](./readme/resourcegroup.md)
 > 2. [Criar seu Event Hub](./readme/event_hub.md)
 > 3. [Criar nosso seu Data Lake, gerenciado e criar nossos containers](./readme/data_lake.md)
-> 4. [Criando seu Stream Analytics e configurar nossos inputs e outputs](./readme/resourcegroup.md)
+> 4. [Criando seu Stream Analytics e configurar nossos inputs e outputs](./readme/stream_analytics.md)
 > 5. [Gerar dados simulados para serem consumidos pelo Event Hub](./readme/event_generator.md)
 > 6. [Criar nossa dashboard no PBI para visualizar nossos dados em stream](./readme/dashboard_pbi.md)
 > 7. [Criar nosso Azure Data Factory e transformar dados](./readme/data_factory.md)
