@@ -1,4 +1,4 @@
-# Criar seu Event Hub 
+# Criar seu Stream Analytics 
 
 > 1. Vamos criar nosso Stream Analytics job
 
